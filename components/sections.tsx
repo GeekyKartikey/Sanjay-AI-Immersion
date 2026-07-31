@@ -86,6 +86,63 @@ export function OrchestrationSection() {
   );
 }
 
+export function TasteLearningSection() {
+  return (
+    <section className="system-section taste-section" id="taste">
+      <div className="drishti-spine" aria-hidden="true" />
+      <div className="container taste-layout">
+        <div className="taste-copy">
+          <SectionMarker label="Taste learning · Your work twin" />
+          <h2>It learns how you work, not just what you work on.</h2>
+          <p>
+            With your approval, Sanjay is designed to learn from your edits,
+            decisions, preferred formats, and repeated routines. Over time, it
+            becomes a digital work twin—an assistant that prepares work more
+            like you would.
+          </p>
+          <p className="twin-note">
+            Not a copy of your identity. A private working model you can
+            inspect, correct, or reset.
+          </p>
+        </div>
+
+        <div className="taste-console" aria-label="Example of Sanjay learning your work preferences">
+          <div className="taste-head">
+            <strong>How your work twin learns</strong>
+            <span>Concept</span>
+          </div>
+          <div className="learning-row">
+            <span><small>You do</small>Shorten a project update</span>
+            <i aria-hidden="true">→</i>
+            <strong><small>Sanjay learns</small>Direct, compact writing</strong>
+          </div>
+          <div className="learning-row">
+            <span><small>You do</small>Move deep work to mornings</span>
+            <i aria-hidden="true">→</i>
+            <strong><small>Sanjay learns</small>Protect focus before noon</strong>
+          </div>
+          <div className="learning-row">
+            <span><small>You do</small>Ask for risks before details</span>
+            <i aria-hidden="true">→</i>
+            <strong><small>Sanjay learns</small>Surface risks first</strong>
+          </div>
+          <div className="adapted-output">
+            <div>
+              <small>Next time · Prepared in your style</small>
+              <p>
+                Partner call at 3 PM. Two decisions are blocked. Review the
+                pricing risk first; the short follow-up is ready.
+              </p>
+            </div>
+            <span>Review before use</span>
+          </div>
+          <p className="taste-control"><i /> Editable · forgettable · private</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function PrivacySection() {
   return (
     <section className="system-section privacy-section" id="privacy">

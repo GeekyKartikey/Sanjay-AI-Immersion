@@ -4,7 +4,7 @@
 
 **Goal:** Redesign the complete Sanjay waitlist page so the interface itself explains voice orchestration across approved software.
 
-**Architecture:** Keep the working Next.js, waitlist form, API, and Convex backend. Replace every marketing section with a product-specific visual layer connected by one Drishti line: voice command, software context, coordinated output, permission boundary, and beta signup.
+**Architecture:** Keep the working Next.js, waitlist form, API, and Convex backend. Replace every marketing section with a product-specific visual layer connected by one Drishti line: voice command, software context, coordinated output, taste learning, permission boundary, and beta signup.
 
 **Tech Stack:** Next.js 16, React 19, TypeScript, CSS, Convex.
 
@@ -14,6 +14,7 @@
 - The modern product meaning is one private view across approved software, controlled by voice.
 - Do not imply that software can listen while the computer is physically asleep.
 - Do not present planned integrations or on-device behavior as already shipped.
+- Present the digital work twin as user-controlled, editable, and resettable—not as a copy of someone’s identity.
 - Keep the page concise and keep the existing waitlist flow unchanged.
 
 ---
@@ -29,11 +30,12 @@
 
 **Interfaces:**
 - Consumes: `TrackedLink` and `WaitlistForm`.
-- Produces: `DivyaDrishtiSection`, `OrchestrationSection`, `PrivacySection`, and `WaitlistSection`.
+- Produces: `DivyaDrishtiSection`, `OrchestrationSection`, `TasteLearningSection`, `PrivacySection`, and `WaitlistSection`.
 
 - [ ] Make the hero show one voice command activating Meet, Mail, Calendar, Docs, and GitHub context.
 - [ ] Explain the name through a short Divya Drishti section without turning mythology into decoration.
 - [ ] Show how one command becomes a brief, draft, reminder, and approved action.
+- [ ] Show approved corrections and routines becoming an editable taste profile and adapted output.
 - [ ] Show the permission boundary as a visible product state.
 
 ### Task 2: Build one connected visual system

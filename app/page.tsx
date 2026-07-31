@@ -6,6 +6,7 @@ import {
   DivyaDrishtiSection,
   OrchestrationSection,
   PrivacySection,
+  TasteLearningSection,
   WaitlistSection,
 } from "@/components/sections";
 
@@ -31,6 +32,7 @@ export default function Home() {
         <Hero />
         <DivyaDrishtiSection />
         <OrchestrationSection />
+        <TasteLearningSection />
         <PrivacySection />
         <WaitlistSection />
       </main>

@@ -8,6 +8,7 @@ export function Navigation() {
         <div className="nav-links">
           <a href="#drishti">Divya Drishti</a>
           <a href="#orchestration">How it works</a>
+          <a href="#taste">Taste learning</a>
           <a href="#privacy">Privacy</a>
           <a className="nav-cta" href="#waitlist">
             Join the beta
