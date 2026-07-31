@@ -1,0 +1,35 @@
+{
+  "name": "sanjay-ai-immersion",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "convex dev --start 'next dev'",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ignore-pattern \"convex/_generated/**\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "convex": "^1.42.3",
+    "next": "^16.2.12",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@convex-dev/eslint-plugin": "^2.0.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.12",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "postcss": "8.5.25",
+    "sharp": "0.35.3"
+  }
+}
