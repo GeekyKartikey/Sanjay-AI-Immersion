@@ -120,7 +120,7 @@ button {
 }
 
 .hero {
-  padding: 4rem 0 5.5rem;
+  padding: 2rem 0 4.5rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -672,7 +672,7 @@ textarea:focus {
   }
 
   .hero {
-    padding: 4.5rem 0;
+    padding: 2.5rem 0 4rem;
   }
 
   .hero h1 {
