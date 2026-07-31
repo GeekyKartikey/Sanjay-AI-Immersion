@@ -38,7 +38,11 @@ export function Hero() {
             <span>Divya Drishti view · Product concept</span>
           </div>
           <div className="voice-request">
-            <span className="voice-button" aria-hidden="true">●</span>
+            <span className="voice-button" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+            </span>
             <div>
               <small>You said</small>
               <p>“Prepare me for the 3 PM partner call.”</p>
@@ -54,7 +58,9 @@ export function Hero() {
             </div>
           </div>
           <div className="preview-answer">
-            <small>Your brief</small>
+            <small>
+              <span aria-hidden="true" /> Divya Drishti brief ready
+            </small>
             <p>
               Last time, you agreed to revise the launch timeline. The new
               proposal is ready, but two pricing questions remain unanswered.

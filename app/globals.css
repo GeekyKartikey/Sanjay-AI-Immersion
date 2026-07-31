@@ -238,14 +238,43 @@ button {
 }
 
 .voice-button {
-  display: grid;
+  position: relative;
+  display: flex;
   width: 2.6rem;
   height: 2.6rem;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
   border-radius: 50%;
-  color: white;
   background: var(--blue);
-  box-shadow: inset 0 0 0 0.65rem white;
+  animation: voiceWake 5s ease-out infinite;
+}
+
+.voice-button::after {
+  position: absolute;
+  inset: -1px;
+  content: "";
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  animation: voiceRing 5s ease-out infinite;
+}
+
+.voice-button i {
+  display: block;
+  width: 2px;
+  height: 0.45rem;
+  background: white;
+  animation: voiceBar 0.7s ease-in-out 3 alternate;
+}
+
+.voice-button i:nth-child(2) {
+  height: 0.85rem;
+  animation-delay: 0.12s;
+}
+
+.voice-button i:nth-child(3) {
+  height: 0.6rem;
+  animation-delay: 0.24s;
 }
 
 .voice-request small,
@@ -265,8 +294,21 @@ button {
 }
 
 .context-strip {
+  position: relative;
   padding: 1rem 1.25rem;
   background: var(--blue-pale);
+  overflow: hidden;
+}
+
+.context-strip::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20%;
+  width: 18%;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(36, 87, 245, 0.16), transparent);
+  animation: contextSweep 5s ease-in-out infinite;
 }
 
 .context-strip > div {
@@ -277,11 +319,26 @@ button {
 }
 
 .context-strip span {
+  position: relative;
+  z-index: 1;
   padding: 0.4rem 0.55rem;
   border: 1px solid rgba(36, 87, 245, 0.22);
   color: var(--blue-dark);
   background: rgba(255, 255, 255, 0.65);
   font-size: 0.7rem;
+  animation: contextSeen 5s ease-out infinite;
+}
+
+.context-strip span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.context-strip span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+
+.context-strip span:nth-child(4) {
+  animation-delay: 0.54s;
 }
 
 .preview-answer {
@@ -292,6 +349,49 @@ button {
   margin: 0.6rem 0 0;
   font-size: 0.88rem;
   line-height: 1.55;
+}
+
+.preview-answer small span {
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  background: var(--blue);
+  animation: briefReady 5s ease-out infinite;
+}
+
+@keyframes voiceWake {
+  0%, 70%, 100% { box-shadow: 0 0 0 0 rgba(36, 87, 245, 0); }
+  8%, 22% { box-shadow: 0 0 0 0.35rem rgba(36, 87, 245, 0.12); }
+}
+
+@keyframes voiceRing {
+  0% { opacity: 0; transform: scale(1); }
+  10% { opacity: 0.55; }
+  28%, 100% { opacity: 0; transform: scale(1.45); }
+}
+
+@keyframes voiceBar {
+  from { transform: scaleY(0.55); }
+  to { transform: scaleY(1.15); }
+}
+
+@keyframes contextSweep {
+  0%, 22% { left: -20%; }
+  58%, 100% { left: 105%; }
+}
+
+@keyframes contextSeen {
+  0%, 24% { border-color: rgba(36, 87, 245, 0.22); background: rgba(255, 255, 255, 0.65); }
+  38%, 68% { border-color: var(--blue); background: white; }
+  82%, 100% { border-color: rgba(36, 87, 245, 0.22); background: rgba(255, 255, 255, 0.65); }
+}
+
+@keyframes briefReady {
+  0%, 52% { opacity: 0.25; transform: scale(0.7); }
+  64%, 88% { opacity: 1; transform: scale(1.35); box-shadow: 0 0 0 0.35rem rgba(36, 87, 245, 0.1); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .preview-actions {
@@ -819,6 +919,8 @@ textarea:focus {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
