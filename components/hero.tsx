@@ -1,81 +1,53 @@
 import { TrackedLink } from "./tracked-link";
 
+const sources = ["Meet", "Mail", "Calendar", "Docs", "GitHub"];
+
 export function Hero() {
   return (
     <section className="hero" id="product">
+      <div className="hero-drishti-line" aria-hidden="true" />
       <div className="container hero-layout">
         <div className="hero-copy">
-          <p className="status-line">
-            <span aria-hidden="true" /> In development · Private beta
-          </p>
+          <p className="status-line"><span /> In development · Private beta</p>
           <h1>Your daily work, remembered and ready when you speak.</h1>
           <p className="hero-lede">
-            Inspired by Sanjay&apos;s Divya Drishti, Sanjay is a private,
-            voice-first personal AI designed to understand context across the
-            software you approve—and coordinate work across them from one voice
-            command.
+            Sanjay is a private, voice-first personal AI designed to hold one
+            view across the software you approve—then prepare, create, and
+            coordinate work from one command.
           </p>
           <div className="hero-actions">
-            <TrackedLink
-              className="primary-button"
-              event="hero_waitlist_clicked"
-              href="#waitlist"
-            >
+            <TrackedLink className="primary-button" event="hero_waitlist_clicked" href="#waitlist">
               Join the private beta
             </TrackedLink>
-            <TrackedLink
-              className="text-link"
-              event="secondary_cta_clicked"
-              href="#example"
-            >
-              See a real example <span aria-hidden="true">↓</span>
+            <TrackedLink className="text-link" event="secondary_cta_clicked" href="#drishti">
+              Why “Sanjay”? <span aria-hidden="true">↓</span>
             </TrackedLink>
           </div>
         </div>
-        <aside className="product-preview" aria-label="Sanjay product concept">
-          <div className="preview-topline">
-            <strong>Sanjay</strong>
-            <span>Divya Drishti view · Product concept</span>
+
+        <div className="drishti-stage" aria-label="Concept showing one voice command working across approved software">
+          <div className="stage-head">
+            <span>Divya Drishti · Product concept</span>
+            <span className="local-state"><i /> Private context</span>
           </div>
-          <div className="voice-request">
-            <span className="voice-button" aria-hidden="true">
-              <i />
-              <i />
-              <i />
-            </span>
-            <div>
-              <small>You said</small>
-              <p>“Prepare me for the 3 PM partner call.”</p>
-            </div>
+          <div className="source-orbit" aria-hidden="true">
+            {sources.map((source, index) => (
+              <span className={`source-node source-${index + 1}`} key={source}>{source}</span>
+            ))}
+            <span className="orbit-ring ring-one" />
+            <span className="orbit-ring ring-two" />
           </div>
-          <div className="context-strip">
-            <small>One view across your approved software</small>
-            <div>
-              <span>Meet notes</span>
-              <span>Email thread</span>
-              <span>Proposal.pdf</span>
-              <span>Calendar</span>
-            </div>
+          <div className="voice-core">
+            <span className="voice-wave" aria-hidden="true"><i /><i /><i /><i /><i /></span>
+            <small>Voice command</small>
+            <strong>“Prepare me for the 3 PM partner call.”</strong>
           </div>
-          <div className="preview-answer">
-            <small>
-              <span aria-hidden="true" /> Divya Drishti brief ready
-            </small>
-            <p>
-              Last time, you agreed to revise the launch timeline. The new
-              proposal is ready, but two pricing questions remain unanswered.
-            </p>
+          <div className="stage-result">
+            <small>Context aligned</small>
+            <strong>Brief ready · 2 open questions · follow-up drafted</strong>
+            <span>Waiting for your approval</span>
           </div>
-          <div className="preview-actions">
-            <button type="button">Draft follow-up</button>
-            <button type="button">Remember next step</button>
-          </div>
-          <p className="permission-note">
-            <span aria-hidden="true">✓</span> Nothing is sent or changed without
-            your approval. Designed for voice access while running in the
-            background.
-          </p>
-        </aside>
+        </div>
       </div>
     </section>
   );

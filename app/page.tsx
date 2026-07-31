@@ -3,8 +3,8 @@ import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Navigation } from "@/components/navigation";
 import {
-  BenefitsSection,
-  DailyExampleSection,
+  DivyaDrishtiSection,
+  OrchestrationSection,
   PrivacySection,
   WaitlistSection,
 } from "@/components/sections";
@@ -29,8 +29,8 @@ export default function Home() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <DailyExampleSection />
-        <BenefitsSection />
+        <DivyaDrishtiSection />
+        <OrchestrationSection />
         <PrivacySection />
         <WaitlistSection />
       </main>

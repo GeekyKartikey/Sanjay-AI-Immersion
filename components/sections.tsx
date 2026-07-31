@@ -1,45 +1,33 @@
 import { WaitlistForm } from "./waitlist-form";
 
-export function DailyExampleSection() {
+function SectionMarker({ label }: { label: string }) {
+  return <p className="section-marker"><span aria-hidden="true" />{label}</p>;
+}
+
+export function DivyaDrishtiSection() {
   return (
-    <section className="page-section example-section" id="example">
-      <div className="container section-layout">
-        <div className="section-intro">
-          <p className="section-label">One ordinary workday</p>
-          <h2>Less searching. Fewer dropped threads.</h2>
-          <p>
-            Sanjay is being built for the small moments where work usually
-            falls through the gaps.
-          </p>
+    <section className="system-section origin-section" id="drishti">
+      <div className="drishti-spine" aria-hidden="true" />
+      <div className="container origin-layout">
+        <div>
+          <SectionMarker label="The idea behind the name" />
+          <h2>Sanjay could see the whole field without standing inside it.</h2>
         </div>
-        <div className="workday-example">
-          <div className="workday-row">
-            <time>2:45 PM</time>
-            <div>
-              <strong>You ask</strong>
-              <p>“Prepare me for the partner call.”</p>
-            </div>
-          </div>
-          <div className="workday-row response-row">
-            <time>2:45 PM</time>
-            <div>
-              <strong>Sanjay brings together</strong>
-              <ul>
-                <li>The last meeting notes</li>
-                <li>The latest proposal</li>
-                <li>Two unanswered questions from email</li>
-              </ul>
-            </div>
-          </div>
-          <div className="workday-row">
-            <time>4:10 PM</time>
-            <div>
-              <strong>After the call</strong>
-              <p>
-                You ask Sanjay to draft the follow-up and remember the next
-                step.
-              </p>
-            </div>
+        <div className="origin-copy">
+          <p>
+            In the Mahabharata, Sanjay was given Divya Drishti—the ability to
+            witness events beyond his physical location and describe what was
+            happening as one connected story.
+          </p>
+          <p>
+            That is the product idea here: not another isolated assistant, but
+            one private view across your approved work context, available
+            through voice.
+          </p>
+          <div className="translation-line">
+            <span>Then</span><strong>See the whole field</strong>
+            <i aria-hidden="true">→</i>
+            <span>Now</span><strong>Understand work across software</strong>
           </div>
         </div>
       </div>
@@ -47,41 +35,51 @@ export function DailyExampleSection() {
   );
 }
 
-export function BenefitsSection() {
-  const benefits = [
-    {
-      title: "Remember what matters",
-      copy: "Keep decisions, commitments, and useful context connected to the work they belong to.",
-    },
-    {
-      title: "Prepare without the hunt",
-      copy: "Bring the right notes, messages, files, and open questions together before a meeting or task.",
-    },
-    {
-      title: "Follow through",
-      copy: "Turn conversations into drafts, reminders, and next steps before they disappear into another busy day.",
-    },
-  ];
-
+export function OrchestrationSection() {
   return (
-    <section className="page-section benefits-section" id="benefits">
+    <section className="system-section orchestration-section" id="orchestration">
+      <div className="drishti-spine" aria-hidden="true" />
       <div className="container">
-        <div className="section-intro compact-intro">
-          <p className="section-label">What it helps with</p>
-          <h2>One assistant across the work you already do.</h2>
+        <div className="orchestration-heading">
+          <div>
+            <SectionMarker label="One command, several systems" />
+            <h2>Speak once. Sanjay follows the context.</h2>
+          </div>
+          <p>
+            Instead of opening five tools and rebuilding the story yourself,
+            Sanjay is designed to trace the work across them and return one
+            useful next move.
+          </p>
         </div>
-        <div className="benefit-list">
-          {benefits.map((benefit) => (
-            <article key={benefit.title}>
-              <span aria-hidden="true">●</span>
-              <h3>{benefit.title}</h3>
-              <p>{benefit.copy}</p>
-            </article>
-          ))}
+        <div className="orchestration-canvas">
+          <div className="command-column">
+            <span className="column-label">01 · You speak</span>
+            <div className="spoken-command">
+              <span className="mini-voice" aria-hidden="true"><i /><i /><i /></span>
+              <p>“Prepare me for the partner call and draft the follow-up.”</p>
+            </div>
+          </div>
+          <div className="context-column">
+            <span className="column-label">02 · Divya Drishti gathers</span>
+            <ul>
+              <li><span>Meet</span>Last conversation and decisions</li>
+              <li><span>Mail</span>Unanswered pricing questions</li>
+              <li><span>Docs</span>Latest proposal version</li>
+              <li><span>Calendar</span>Attendees and meeting time</li>
+            </ul>
+          </div>
+          <div className="action-column">
+            <span className="column-label">03 · Sanjay prepares</span>
+            <div className="prepared-output">
+              <p><strong>Meeting brief</strong><span>Ready</span></p>
+              <p><strong>Open questions</strong><span>2 found</span></p>
+              <p><strong>Follow-up draft</strong><span>Needs approval</span></p>
+            </div>
+          </div>
         </div>
-        <p className="honesty-note">
-          Sanjay is in development. The first workflows will be shaped with
-          early users rather than presented as finished features today.
+        <p className="availability-note">
+          Designed to stay available by voice while running in the background
+          and your device is awake.
         </p>
       </div>
     </section>
@@ -90,30 +88,25 @@ export function BenefitsSection() {
 
 export function PrivacySection() {
   return (
-    <section className="page-section privacy-section" id="privacy">
+    <section className="system-section privacy-section" id="privacy">
+      <div className="drishti-spine" aria-hidden="true" />
       <div className="container privacy-layout">
-        <div className="section-intro">
-          <p className="section-label">Privacy is part of the product</p>
-          <h2>Your work context should remain yours.</h2>
+        <div>
+          <SectionMarker label="Power needs a boundary" />
+          <h2>It can see only what you allow. It acts only when you approve.</h2>
           <p>
-            Sanjay is being designed to process personal context on your device
-            by default and ask before reaching an outside service.
+            Divya Drishti in Sanjay is not silent access. The product is being
+            designed around an explicit permission boundary.
           </p>
         </div>
-        <ul className="privacy-points">
-          <li>
-            <strong>Local by default</strong>
-            <span>Keep personal memory and approved context on your device.</span>
-          </li>
-          <li>
-            <strong>Permission before action</strong>
-            <span>Know when email, calendar, the web, or another tool is used.</span>
-          </li>
-          <li>
-            <strong>Memory you control</strong>
-            <span>See, correct, and remove what the assistant remembers.</span>
-          </li>
-        </ul>
+        <div className="permission-console">
+          <div className="console-head"><strong>Permission boundary</strong><span>Concept</span></div>
+          <div className="console-row"><span>Local files and memory</span><strong>On device</strong></div>
+          <div className="console-row"><span>Read approved work context</span><strong>Allowed</strong></div>
+          <div className="console-row warning"><span>Send email follow-up</span><strong>Ask every time</strong></div>
+          <div className="console-row warning"><span>Change calendar or task</span><strong>Ask every time</strong></div>
+          <div className="console-foot"><i /> No silent uploads · Memory can be corrected or removed</div>
+        </div>
       </div>
     </section>
   );
@@ -121,20 +114,23 @@ export function PrivacySection() {
 
 export function WaitlistSection() {
   return (
-    <section className="page-section waitlist-section" id="waitlist">
+    <section className="system-section waitlist-section" id="waitlist">
+      <div className="drishti-spine" aria-hidden="true" />
       <div className="container waitlist-layout">
-        <div className="section-intro">
-          <p className="section-label">Private beta</p>
-          <h2>Help shape how Sanjay handles a real workday.</h2>
+        <div>
+          <SectionMarker label="Private beta" />
+          <h2>What should Sanjay learn to see across your workday?</h2>
           <p>
-            Join the early list and tell us where context gets lost in your
-            daily work. The first group will stay small while we build the core
-            workflows.
+            Join the first group and share the software, context, and repeated
+            work you want one voice command to bring together.
           </p>
+          <ul className="beta-signals">
+            <li>Shape the first connected workflows</li>
+            <li>Test the permission model</li>
+            <li>Get early product access</li>
+          </ul>
         </div>
-        <div className="form-panel">
-          <WaitlistForm />
-        </div>
+        <div className="form-panel"><WaitlistForm /></div>
       </div>
     </section>
   );
