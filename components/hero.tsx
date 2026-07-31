@@ -31,18 +31,42 @@ export function Hero() {
             </TrackedLink>
           </div>
         </div>
-        <aside className="today-note" aria-label="Example daily briefing">
-          <div className="note-topline">
-            <span>Tuesday · 9:10 AM</span>
-            <span>Example</span>
+        <aside className="product-preview" aria-label="Sanjay product concept">
+          <div className="preview-topline">
+            <strong>Sanjay</strong>
+            <span>Product concept · On-device</span>
           </div>
-          <p className="note-prompt">“What needs my attention today?”</p>
-          <div className="note-answer">
-            <p>You have a partner call at 3 PM.</p>
-            <p>Riya is waiting for feedback on the launch draft.</p>
-            <p>You promised to send Arjun the revised proposal yesterday.</p>
+          <div className="voice-request">
+            <span className="voice-button" aria-hidden="true">●</span>
+            <div>
+              <small>You said</small>
+              <p>“Prepare me for the 3 PM partner call.”</p>
+            </div>
           </div>
-          <p className="note-foot">One answer, using context you approved.</p>
+          <div className="context-strip">
+            <small>Context found with your permission</small>
+            <div>
+              <span>Meet notes</span>
+              <span>Email thread</span>
+              <span>Proposal.pdf</span>
+              <span>Calendar</span>
+            </div>
+          </div>
+          <div className="preview-answer">
+            <small>Your brief</small>
+            <p>
+              Last time, you agreed to revise the launch timeline. The new
+              proposal is ready, but two pricing questions remain unanswered.
+            </p>
+          </div>
+          <div className="preview-actions">
+            <button type="button">Draft follow-up</button>
+            <button type="button">Remember next step</button>
+          </div>
+          <p className="permission-note">
+            <span aria-hidden="true">✓</span> Nothing is sent or changed without
+            your approval.
+          </p>
         </aside>
       </div>
     </section>
