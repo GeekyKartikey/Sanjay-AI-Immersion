@@ -8,11 +8,12 @@ export function Hero() {
           <p className="status-line">
             <span aria-hidden="true" /> In development · Private beta
           </p>
-          <h1>Your daily work, remembered and ready when you need it.</h1>
+          <h1>Your daily work, remembered and ready when you speak.</h1>
           <p className="hero-lede">
-            Sanjay is a voice-first personal AI assistant that connects your
-            meetings, messages, files, tasks, and follow-ups—so you can ask what
-            needs attention instead of searching across every tool.
+            Inspired by Sanjay&apos;s Divya Drishti, Sanjay is a private,
+            voice-first personal AI designed to understand context across the
+            software you approve—and coordinate work across them from one voice
+            command.
           </p>
           <div className="hero-actions">
             <TrackedLink
@@ -34,7 +35,7 @@ export function Hero() {
         <aside className="product-preview" aria-label="Sanjay product concept">
           <div className="preview-topline">
             <strong>Sanjay</strong>
-            <span>Product concept · On-device</span>
+            <span>Divya Drishti view · Product concept</span>
           </div>
           <div className="voice-request">
             <span className="voice-button" aria-hidden="true">●</span>
@@ -44,7 +45,7 @@ export function Hero() {
             </div>
           </div>
           <div className="context-strip">
-            <small>Context found with your permission</small>
+            <small>One view across your approved software</small>
             <div>
               <span>Meet notes</span>
               <span>Email thread</span>
@@ -65,7 +66,8 @@ export function Hero() {
           </div>
           <p className="permission-note">
             <span aria-hidden="true">✓</span> Nothing is sent or changed without
-            your approval.
+            your approval. Designed for voice access while running in the
+            background.
           </p>
         </aside>
       </div>

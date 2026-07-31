@@ -16,7 +16,7 @@ const softwareProductSchema = {
   applicationCategory: "ProductivityApplication",
   operatingSystem: "macOS, Windows, Linux",
   description:
-    "A private, voice-first AI assistant designed to run on your device and help manage meetings, communication, projects, and daily tasks.",
+    "A private, voice-first personal AI designed to understand context across approved software and coordinate daily work from one voice command.",
   offers: { "@type": "Offer", availability: "https://schema.org/PreOrder" },
 };
 

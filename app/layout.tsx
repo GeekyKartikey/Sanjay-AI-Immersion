@@ -18,7 +18,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 const title = "Sanjay | Private On-Device Voice AI Assistant";
 const description =
-  "Sanjay is a private, voice-first AI assistant that runs on your device, learns how you work, and helps manage meetings, communication, projects, and daily tasks.";
+  "Sanjay is a private, voice-first personal AI designed to understand context across your approved software and coordinate daily work from one voice command.";
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
