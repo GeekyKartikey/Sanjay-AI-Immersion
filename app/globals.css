@@ -53,7 +53,7 @@ button {
 }
 
 .container {
-  width: min(1280px, calc(100% - 3rem));
+  width: min(1760px, calc(100% - 3rem));
   margin-inline: auto;
 }
 
@@ -821,7 +821,7 @@ textarea:focus {
 
 @media (max-width: 760px) {
   .container {
-    width: min(100% - 2rem, 1280px);
+    width: min(100% - 2rem, 1760px);
   }
 
   .nav {
@@ -984,7 +984,7 @@ body {
 .hero-drishti-line,
 .drishti-spine {
   position: absolute;
-  left: max(1rem, calc((100vw - 1280px) / 2 - 2.2rem));
+  left: max(1rem, calc((100vw - 1760px) / 2 - 2.2rem));
   width: 1px;
   background: var(--saffron);
 }
@@ -1011,7 +1011,7 @@ body {
 .hero-layout {
   position: relative;
   z-index: 2;
-  grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+  grid-template-columns: minmax(0, 0.78fr) minmax(520px, 1.22fr);
   gap: clamp(2.5rem, 5vw, 4.5rem);
   min-height: auto;
 }
@@ -1381,7 +1381,7 @@ body {
 }
 
 @media (max-width: 380px) {
-  .container { width: min(100% - 1.5rem, 1280px); }
+  .container { width: min(100% - 1.5rem, 1760px); }
   .nav-cta { font-size: .72rem; }
   .hero h1 { font-size: 2.2rem; }
   .hero-actions { align-items: stretch; flex-direction: column; }
