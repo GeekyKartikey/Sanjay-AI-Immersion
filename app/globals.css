@@ -962,8 +962,8 @@ body {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 4.75rem);
-  padding: 3rem 0 4rem;
+  min-height: auto;
+  padding: clamp(3.5rem, 6vw, 5rem) 0;
   overflow: hidden;
 }
 
@@ -1011,19 +1011,24 @@ body {
 .hero-layout {
   position: relative;
   z-index: 2;
-  grid-template-columns: minmax(0, 0.88fr) minmax(500px, 1.12fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  min-height: calc(100vh - 11.75rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  min-height: auto;
 }
 
 .hero h1 {
-  max-width: 620px;
-  font-size: clamp(3.5rem, 5.4vw, 5.4rem);
+  max-width: 560px;
+  font-size: clamp(3.25rem, 4.5vw, 4.35rem);
+  line-height: 1.01;
 }
 
 .hero-lede {
   max-width: 570px;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
 }
+
+.hero-actions { margin-top: 1.75rem; }
 
 .status-line span {
   background: var(--saffron);
@@ -1031,7 +1036,7 @@ body {
 
 .drishti-stage {
   position: relative;
-  min-height: 560px;
+  min-height: 500px;
   border: 1px solid var(--ink);
   background: rgba(255, 253, 248, 0.84);
   overflow: hidden;
@@ -1172,7 +1177,7 @@ body {
 
 .system-section {
   position: relative;
-  padding: 7rem 0;
+  padding: 6rem 0;
   border-bottom: 1px solid var(--line);
 }
 
