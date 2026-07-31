@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import {
-  IBM_Plex_Mono,
-  IBM_Plex_Sans,
-  Instrument_Serif,
-} from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
@@ -66,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${instrumentSerif.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
+        className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
       >
         {children}
       </body>

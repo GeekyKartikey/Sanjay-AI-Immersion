@@ -3,16 +3,10 @@ import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Navigation } from "@/components/navigation";
 import {
-  DifferentiatorsSection,
-  FinalCtaSection,
-  MvpSection,
-  PersonalisationSection,
+  BenefitsSection,
+  DailyExampleSection,
   PrivacySection,
-  ProblemSection,
-  ProductFlowSection,
-  UseCasesSection,
   WaitlistSection,
-  WorkdaySection,
 } from "@/components/sections";
 
 const softwareProductSchema = {
@@ -35,16 +29,10 @@ export default function Home() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <WorkdaySection />
-        <ProblemSection />
-        <ProductFlowSection />
-        <DifferentiatorsSection />
-        <MvpSection />
-        <UseCasesSection />
-        <PersonalisationSection />
+        <DailyExampleSection />
+        <BenefitsSection />
         <PrivacySection />
         <WaitlistSection />
-        <FinalCtaSection />
       </main>
       <Footer />
       <AnalyticsSectionObserver />

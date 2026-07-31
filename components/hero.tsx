@@ -1,55 +1,49 @@
 import { TrackedLink } from "./tracked-link";
-import { InteractiveSight } from "./interactive-sight";
 
 export function Hero() {
   return (
     <section className="hero" id="product">
-      <div className="hero-sightline" aria-hidden="true" />
-      <div className="container hero-grid">
+      <div className="container hero-layout">
         <div className="hero-copy">
-          <p className="eyebrow">
-            In development · Private voice AI for your computer
+          <p className="status-line">
+            <span aria-hidden="true" /> In development · Private beta
           </p>
-          <h1>
-            One voice
-            <br />
-            for work that
-            <br />
-            <em>lives everywhere</em>
-          </h1>
+          <h1>Your daily work, remembered and ready when you need it.</h1>
           <p className="hero-lede">
-            Sanjay connects the context in your meetings, messages, files, and
-            projects. Ask by voice to prepare, find, draft, remember, and follow
-            up.
-          </p>
-          <p className="hero-support">
-            It works on your device by default. Nothing reaches email, calendar,
-            the web, or another tool without your permission.
+            Sanjay is a voice-first personal AI assistant that connects your
+            meetings, messages, files, tasks, and follow-ups—so you can ask what
+            needs attention instead of searching across every tool.
           </p>
           <div className="hero-actions">
             <TrackedLink
-              className="button button-primary"
+              className="primary-button"
               event="hero_waitlist_clicked"
               href="#waitlist"
             >
-              <span aria-hidden="true" className="action-ring" />
               Join the private beta
             </TrackedLink>
             <TrackedLink
-              className="button button-secondary"
+              className="text-link"
               event="secondary_cta_clicked"
-              href="#how-it-works"
+              href="#example"
             >
-              See how Sanjay works <span aria-hidden="true">↓</span>
+              See a real example <span aria-hidden="true">↓</span>
             </TrackedLink>
           </div>
-          <ul className="trust-list" aria-label="Sanjay principles">
-            <li>Local by default</li>
-            <li>Permission before reach</li>
-            <li>Memory you control</li>
-          </ul>
         </div>
-        <InteractiveSight />
+        <aside className="today-note" aria-label="Example daily briefing">
+          <div className="note-topline">
+            <span>Tuesday · 9:10 AM</span>
+            <span>Example</span>
+          </div>
+          <p className="note-prompt">“What needs my attention today?”</p>
+          <div className="note-answer">
+            <p>You have a partner call at 3 PM.</p>
+            <p>Riya is waiting for feedback on the launch draft.</p>
+            <p>You promised to send Arjun the revised proposal yesterday.</p>
+          </div>
+          <p className="note-foot">One answer, using context you approved.</p>
+        </aside>
       </div>
     </section>
   );
